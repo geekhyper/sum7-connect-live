@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "src": "/api/trpc/(.*)", "dest": "/api/trpc/[trpc].ts" },
+    { "src": "/(.*)", "dest": "/" }
+  ]
+}
