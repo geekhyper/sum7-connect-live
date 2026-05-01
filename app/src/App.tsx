@@ -1,4 +1,4 @@
-import { Routes, Route, Navigate, useLocation } from "react-router";
+import { Routes, Route, Navigate, useLocation } from "react-router-dom-dom";
 import { useEffect } from "react";
 import { trpc } from "@/providers/trpc";
 import { useAuthStore } from "@/stores/authStore";
@@ -12,6 +12,8 @@ import ChatListPage from "@/pages/ChatListPage";
 import ChatRoomPage from "@/pages/ChatRoomPage";
 import UserProfilePage from "@/pages/UserProfilePage";
 import BottomNav from "@/components/BottomNav";
+import Dashboard from "@/pages/Dashboard";
+
 
 function AppLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -80,7 +82,8 @@ export default function App() {
                   <Route path="/chats" element={<ChatListPage />} />
                   <Route path="/notifications" element={<NotificationsPage />} />
                   <Route path="/profile" element={<ProfilePage />} />
-                  <Route path="/profile/:userId" element={<UserProfilePage />} />
+                  <Route path="/profile/:userId" element={<UserProfilePage />}
+<Route path="/dashboard" element={<Dashboard />} /> />
                 </Routes>
               </AppLayout>
             </AuthGuard>
