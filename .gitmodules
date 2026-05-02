@@ -1,0 +1,3 @@
+[submodule "app/sum7-connect-live"]
+    path = app/sum7-connect-live
+    url = https://github.com/geekhyper/sum7-connect-live.git
